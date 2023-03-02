@@ -71,6 +71,12 @@ class Environment {
     public static Cancel: boolean = true;
 
     /**
+     * **Macro**: Gets the button ID of the button that was pressed in the environment
+     * @type {string}
+     */
+    public static ButtonID: string = "";
+
+    /**
      * **Macro + Validation Rule**: Allows access to the current file pertaining to the environment
      * 
      */
