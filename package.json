@@ -1,12 +1,41 @@
 {
-  "name": "@noahgarrett/byte-jscript",
+  "name": "byte-jscript",
   "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "description": "A helper package for creating Macros and Validation Rules within the Byte Pro Loan Management System (LMS).",
+  "main": "lib/index.js",
+  "types": "lib/index.d.ts",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "tsc",
+    "format": "prettier --write \"src/**/*.ts\" \"src/**/*.js\"",
+    "lint": "tslint -p tsconfig.json",
+    "prepare" : "npm run build",
+    "prepublishOnly" : "npm test && npm run lint",
+    "preversion" : "npm run lint",
+    "version" : "npm run format && git add -A src",
+    "postversion" : "git push && git push --tags"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC"
+  "keywords": [
+    "Byte",
+    "Byte Pro",
+    "Byte Loan",
+    "Byte JScript",
+    "Microsoft JScript"
+  ],
+  "author": "Noah Garrett",
+  "license": "ISC",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/noahgarrett/byte-jscript.git"
+  },
+  "homepage": "https://github.com/noahgarrett/byte-jscript#readme",
+  "devDependencies": {
+    "prettier": "^2.8.4",
+    "tslint": "^6.1.3",
+    "tslint-config-prettier": "^1.18.0",
+    "typescript": "^4.9.5"
+  },
+  "files": [
+    "lib/**/*"
+  ]
 }
