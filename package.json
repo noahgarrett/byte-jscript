@@ -1,6 +1,6 @@
 {
   "name": "byte-jscript",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "A helper package for creating Macros and Validation Rules within the Byte Pro Loan Management System (LMS).",
   "main": "lib/index.js",
   "types": "lib/index.d.ts",
